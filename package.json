@@ -1,0 +1,49 @@
+{
+  "name": "albedo-desktop-pet",
+  "version": "1.0.0",
+  "description": "雅儿贝德3D桌面宠物 — Albedo Desktop Pet",
+  "main": "src/main/main.js",
+  "scripts": {
+    "dev": "electron .",
+    "start": "electron .",
+    "build:win": "electron-builder --win portable",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux"
+  },
+  "build": {
+    "appId": "com.nazarick.albedo-pet",
+    "productName": "Albedo Pet",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        "portable"
+      ],
+      "icon": "assets/icon.ico"
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "icon": "assets/icon.icns"
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "icon": "assets/icon.png"
+    },
+    "files": [
+      "src/**/*",
+      "assets/**/*",
+      "package.json"
+    ]
+  },
+  "devDependencies": {
+    "electron": "^28.3.3",
+    "electron-builder": "^24.0.0"
+  },
+  "dependencies": {
+  }
+}
