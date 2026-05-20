@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>Albedo 三视图 — Character Reference Sheet</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#1a1a2e;color:#e0e0e0;font-family:'Segoe UI',sans-serif;display:flex;flex-direction:column;align-items:center;padding:20px;}
+h1{color:#e0c080;margin-bottom:10px;font-size:1.8em;letter-spacing:4px;}
+.subtitle{color:#888;margin-bottom:30px;font-size:0.9em;}
+.sheet{display:flex;gap:40px;flex-wrap:wrap;justify-content:center;align-items:flex-start;}
+.view{background:#252540;border:2px solid #3a3a60;border-radius:12px;padding:20px;text-align:center;width:280px;}
+.view h2{color:#c0a060;margin-bottom:12px;font-size:1.1em;letter-spacing:3px;}
+.view svg{width:240px;height:400px;}
+.notes{margin-top:30px;max-width:900px;line-height:1.8;color:#aaa;font-size:0.85em;text-align:left;background:#222238;padding:20px;border-radius:8px;}
+.notes strong{color:#d4a860;}
+.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 20px;margin-top:15px;}
+.feature-grid span{color:#e0e0e0;}
+</style>
+</head>
+<body>
+<h1>YABEIERDE / ALBEDO</h1>
+<p class="subtitle">Character Reference Sheet — Three-View Drawing</p>
+
+<div class="sheet">
+
+<!-- FRONT VIEW -->
+<div class="view">
+<h2>FRONT</h2>
+<svg viewBox="0 0 240 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="skin" cx="50%" cy="40%"><stop offset="0%" stop-color="#fff5ee"/><stop offset="100%" stop-color="#f0dcc8"/></radialGradient>
+    <radialGradient id="eyeGrad" cx="50%" cy="50%"><stop offset="0%" stop-color="#ffd700"/><stop offset="60%" stop-color="#daa520"/><stop offset="100%" stop-color="#b8860b"/></radialGradient>
+    <linearGradient id="hairGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1a1a2e"/><stop offset="100%" stop-color="#0d0d1a"/></linearGradient>
+    <linearGradient id="hornGrad" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#1a1a1a"/><stop offset="100%" stop-color="#3a3a3a"/></linearGradient>
+    <linearGradient id="dressGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#e8e0e8"/></linearGradient>
+    <linearGradient id="wingGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1a0a2e"/><stop offset="50%" stop-color="#0d0d1a"/><stop offset="100%" stop-color="#2a1040"/></linearGradient>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#ffd700"/><stop offset="100%" stop-color="#b8860b"/></linearGradient>
+    <linearGradient id="shoulderGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f5f5f5"/><stop offset="100%" stop-color="#d0d0d0"/></linearGradient>
+  </defs>
+
+  <!-- Hair behind body -->
+  <ellipse cx="120" cy="120" rx="70" ry="140" fill="#0d0d1a" opacity="0.7"/>
+  <rect x="80" y="220" width="80" height="80" rx="5" fill="#0d0d1a" opacity="0.6"/>
+
+  <!-- Dress / body base -->
+  <path d="M85,155 L75,220 L70,340 L170,340 L165,220 L155,155 Z" fill="url(#dressGrad)" stroke="#d0c8d0" stroke-width="1"/>
+  <!-- Dress collar -->
+  <path d="M85,155 L120,140 L155,155 L145,170 L120,165 L95,170 Z" fill="#f8f4f8" stroke="#d0c8d0" stroke-width="0.5"/>
+  <!-- Gold collar trim -->
+  <path d="M87,158 Q120,148 153,158" fill="none" stroke="url(#goldGrad)" stroke-width="2"/>
+  <!-- Chest gem -->
+  <ellipse cx="120" cy="175" rx="4" ry="7" fill="#8800aa" stroke="url(#goldGrad)" stroke-width="1"/>
+  <!-- Gold waist chain -->
+  <line x1="76" y1="220" x2="164" y2="220" stroke="url(#goldGrad)" stroke-width="1.5"/>
+  <circle cx="120" cy="220" r="5" fill="url(#goldGrad)" stroke="#b8860b" stroke-width="0.5"/>
+  <!-- Skirt layers -->
+  <path d="M75,240 Q120,230 165,240 L170,340 Q120,350 70,340 Z" fill="rgba(255,255,255,0.3)" stroke="#ddd" stroke-width="0.5"/>
+  <!-- Skirt gold trim -->
+  <path d="M73,250 Q120,242 167,250" fill="none" stroke="url(#goldGrad)" stroke-width="1"/>
+
+  <!-- Left shoulder armor -->
+  <path d="M50,148 L70,145 L80,155 L85,170 L75,178 L55,175 L48,162 Z" fill="url(#shoulderGrad)" stroke="url(#goldGrad)" stroke-width="1.5"/>
+  <circle cx="65" cy="162" r="5" fill="#1a0030" stroke="url(#goldGrad)" stroke-width="1"/>
+
+  <!-- Neck -->
+  <rect x="113" y="135" width="14" height="25" rx="3" fill="url(#skin)"/>
+
+  <!-- Head -->
+  <ellipse cx="120" cy="105" rx="38" ry="48" fill="url(#skin)"/>
+  <!-- Jaw line -->
+  <path d="M90,115 Q120,138 150,115" fill="none" stroke="#e0c8a8" stroke-width="0.8"/>
+
+  <!-- Bangs / fringe -->
+  <path d="M80,90 Q90,65 110,58 Q120,55 130,58 Q150,65 160,90" fill="url(#hairGrad)"/>
+  <path d="M82,92 Q100,75 120,72 Q140,75 158,92" fill="url(#hairGrad)" opacity="0.8"/>
+  <!-- Side hair strands -->
+  <path d="M78,95 Q65,140 68,180 Q70,195 75,200" fill="none" stroke="#0d0d1a" stroke-width="6" stroke-linecap="round"/>
+  <path d="M162,95 Q175,140 172,180 Q170,195 165,200" fill="none" stroke="#0d0d1a" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Eyes -->
+  <ellipse cx="106" cy="100" rx="10" ry="7" fill="url(#eyeGrad)"/>
+  <ellipse cx="134" cy="100" rx="10" ry="7" fill="url(#eyeGrad)"/>
+  <!-- Pupils -->
+  <ellipse cx="106" cy="100" rx="3" ry="6" fill="#1a0a00"/>
+  <ellipse cx="134" cy="100" rx="3" ry="6" fill="#1a0a00"/>
+  <!-- Eye highlights -->
+  <circle cx="109" cy="97" r="2" fill="rgba(255,255,255,0.8)"/>
+  <circle cx="137" cy="97" r="2" fill="rgba(255,255,255,0.8)"/>
+
+  <!-- Nose -->
+  <path d="M118,108 L117,113 L120,114 L123,113 L122,108" fill="#e8c8a8" stroke="none"/>
+
+  <!-- Mouth -->
+  <path d="M113,120 Q120,124 127,120" fill="none" stroke="#c09090" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Horns -->
+  <polygon points="90,65 78,20 95,60" fill="url(#hornGrad)" stroke="#555" stroke-width="0.5"/>
+  <polygon points="150,65 162,20 145,60" fill="url(#hornGrad)" stroke="#555" stroke-width="0.5"/>
+
+  <!-- Wings (behind, visible on sides) -->
+  <path d="M55,200 Q30,170 20,140 Q25,180 40,210 Q20,220 15,250 Q30,235 50,240" fill="url(#wingGrad)" opacity="0.7"/>
+  <path d="M185,200 Q210,170 220,140 Q215,180 200,210 Q220,220 225,250 Q210,235 190,240" fill="url(#wingGrad)" opacity="0.7"/>
+
+  <!-- Neck choker -->
+  <rect x="108" y="148" width="24" height="5" rx="2" fill="url(#goldGrad)"/>
+  <circle cx="120" cy="150.5" r="3" fill="#8800aa" stroke="url(#goldGrad)" stroke-width="0.5"/>
+
+  <!-- Ground shadow -->
+  <ellipse cx="120" cy="355" rx="50" ry="6" fill="rgba(0,0,0,0.2)"/>
+</svg>
+</div>
+
+<!-- SIDE VIEW -->
+<div class="view">
+<h2>SIDE</h2>
+<svg viewBox="0 0 240 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Hair behind -->
+  <ellipse cx="100" cy="140" rx="40" ry="120" fill="#0d0d1a" opacity="0.5"/>
+
+  <!-- Body dress side profile -->
+  <path d="M100,150 L100,220 L95,340 L175,340 L175,220 L170,150" fill="url(#dressGrad)" stroke="#d0c8d0" stroke-width="1"/>
+  <!-- Collar side -->
+  <path d="M100,150 L120,145 L170,150 L165,165 L120,160 Z" fill="#f0ecf0"/>
+  <!-- Waist -->
+  <line x1="98" y1="220" x2="175" y2="220" stroke="url(#goldGrad)" stroke-width="1.5"/>
+
+  <!-- Neck -->
+  <rect x="115" y="130" width="12" height="22" rx="3" fill="url(#skin)"/>
+
+  <!-- Head side profile -->
+  <ellipse cx="122" cy="100" rx="35" ry="42" fill="url(#skin)"/>
+  <!-- Nose profile -->
+  <path d="M148,95 L158,98 L158,100 L148,103" fill="#e8c8a8"/>
+
+  <!-- Hair flow behind -->
+  <path d="M95,80 Q70,60 65,100 Q60,160 70,220 Q75,260 80,300" fill="url(#hairGrad)" opacity="0.85"/>
+
+  <!-- Bangs -->
+  <path d="M88,85 Q110,60 140,65 Q155,70 160,85" fill="url(#hairGrad)"/>
+
+  <!-- Eye (side) -->
+  <ellipse cx="140" cy="95" rx="8" ry="5" fill="url(#eyeGrad)"/>
+  <ellipse cx="140" cy="95" rx="2.5" ry="5" fill="#1a0a00"/>
+  <circle cx="142" cy="92" r="1.5" fill="rgba(255,255,255,0.7)"/>
+
+  <!-- Mouth -->
+  <path d="M145,112 Q150,114 155,112" fill="none" stroke="#c09090" stroke-width="0.8"/>
+
+  <!-- Horn side -->
+  <polygon points="140,65 155,25 148,60" fill="url(#hornGrad)"/>
+
+  <!-- Shoulder armor side -->
+  <path d="M95,145 L85,140 L80,155 L85,168 L95,170" fill="url(#shoulderGrad)" stroke="url(#goldGrad)" stroke-width="1"/>
+
+  <!-- Wing side -->
+  <path d="M175,180 Q200,150 210,120 Q205,170 195,195 Q215,200 220,230 Q200,225 190,225 Q200,260 205,300 Q185,270 178,250" fill="url(#wingGrad)" opacity="0.6"/>
+  <!-- Wing tip highlights -->
+  <path d="M210,120 L215,125 L212,130" fill="#3a1a50" opacity="0.4"/>
+
+  <!-- Neck choker -->
+  <rect x="112" y="142" width="20" height="4" rx="2" fill="url(#goldGrad)"/>
+
+  <!-- Ground shadow -->
+  <ellipse cx="140" cy="355" rx="55" ry="5" fill="rgba(0,0,0,0.15)"/>
+</svg>
+</div>
+
+<!-- BACK VIEW -->
+<div class="view">
+<h2>BACK</h2>
+<svg viewBox="0 0 240 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Hair waterfall back -->
+  <ellipse cx="120" cy="150" rx="60" ry="160" fill="#0d0d1a"/>
+  <path d="M85,100 Q120,80 155,100 Q155,280 120,320 Q85,280 85,100" fill="#111122"/>
+
+  <!-- Full wings spread -->
+  <path d="M80,190 Q30,140 15,80 Q20,130 35,170 Q10,180 5,210 Q25,195 45,195 Q15,230 20,270 Q40,240 60,225 Q45,275 55,310 Q70,270 80,245" fill="url(#wingGrad)" opacity="0.85"/>
+  <path d="M160,190 Q210,140 225,80 Q220,130 205,170 Q230,180 235,210 Q215,195 195,195 Q225,230 220,270 Q200,240 180,225 Q195,275 185,310 Q170,270 160,245" fill="url(#wingGrad)" opacity="0.85"/>
+  <!-- Wing membrane details -->
+  <path d="M80,190 Q60,160 40,140" fill="none" stroke="#2a1040" stroke-width="0.5"/>
+  <path d="M160,190 Q180,160 200,140" fill="none" stroke="#2a1040" stroke-width="0.5"/>
+
+  <!-- Dress back -->
+  <path d="M85,155 L75,220 L70,340 L170,340 L165,220 L155,155 Z" fill="url(#dressGrad)" stroke="#d0c8d0" stroke-width="1"/>
+  <!-- Back collar -->
+  <path d="M85,155 L120,148 L155,155" fill="none" stroke="url(#goldGrad)" stroke-width="1.5"/>
+
+  <!-- Hair bands / ties -->
+  <path d="M100,145 Q120,138 140,145" fill="none" stroke="url(#goldGrad)" stroke-width="1.5"/>
+
+  <!-- Back of head -->
+  <ellipse cx="120" cy="100" rx="38" ry="45" fill="#0d0d1a"/>
+
+  <!-- Horns from behind -->
+  <polygon points="95,65 82,22 90,60" fill="url(#hornGrad)"/>
+  <polygon points="145,65 158,22 150,60" fill="url(#hornGrad)"/>
+
+  <!-- Shoulder armor back -->
+  <path d="M85,145 L75,140 L70,155 L75,168 L85,170" fill="url(#shoulderGrad)" stroke="url(#goldGrad)" stroke-width="1"/>
+
+  <!-- Gold waist chain back -->
+  <line x1="76" y1="220" x2="164" y2="220" stroke="url(#goldGrad)" stroke-width="1"/>
+
+  <!-- Ground shadow -->
+  <ellipse cx="120" cy="355" rx="70" ry="7" fill="rgba(0,0,0,0.2)"/>
+</svg>
+</div>
+
+</div>
+
+<div class="notes">
+<h3>📋 Character Design Notes</h3>
+<div class="feature-grid">
+<span><strong>姓名：</strong>雅儿贝德 (Albedo)</span>
+<span><strong>种族：</strong>魅魔 (Succubus)</span>
+<span><strong>身高：</strong>170cm (含角178cm)</span>
+<span><strong>瞳色：</strong>琥珀金 (#DAA520→#FFD700)</span>
+<span><strong>发色：</strong>鸦羽黑 (#0D0D1A→#1A1A2E)</span>
+<span><strong>发型：</strong>齐刘海及腰直发+两侧短束</span>
+<span><strong>犄角：</strong>黑曜石质感弯曲角 (#1A1A1A→#3A3A3A)</span>
+<span><strong>肤色：</strong>瓷器白 (#FFF5EE→#F0DCC8)</span>
+<span><strong>衣裙：</strong>纯白四层叠纱+金色滚边</span>
+<span><strong>左肩甲：</strong>白金配色+暗紫宝石</span>
+<span><strong>黑翼：</strong>宽大鸦羽质 (#1A0A2E→#2A1040)</span>
+<span><strong>项圈：</strong>金色蛛网纹 (#FFD700)</span>
+<span><strong>胸饰：</strong>泪滴形紫宝石</span>
+<span><strong>腰饰：</strong>金链+蛛网徽章</span>
+</div>
+<p style="margin-top:12px"><strong>设计参考：</strong>以上为简化三视图，用于3D建模参考。实际3D模型需根据此比例和特征在Blender中精细建模。</p>
+</div>
+
+</body>
+</html>
